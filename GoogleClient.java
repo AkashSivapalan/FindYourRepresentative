@@ -15,7 +15,7 @@ public class GoogleClient {
                 .uri(uriBuilder -> uriBuilder
                         .path("/maps/api/geocode/json")
                         .queryParam("address", address)
-                        .queryParam("key","AIzaSyDVT27ynaH-Exh_YE6g3p54muKITjymgtk")
+                        .queryParam("key","Enter your own google key")
                         .build())
                 .exchange().block().bodyToMono(String.class).block();
         String latitude = getLatitude(googleResponseJson);
